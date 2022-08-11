@@ -30,6 +30,9 @@ npm install friendly-duration
 ```javascript
 import friendlyDuration from "friendly-duration";
 
+// OR in CommonJS:
+// const friendlyDuration = require("friendlyDuration").default;
+
 // friendlyDuration(MS, AddCommas?, AddAnd?)
 console.log(friendlyDuration(1000)); // 1 second
 console.log(friendlyDuration(86400000 + 10000)); // 1 day and 10 seconds

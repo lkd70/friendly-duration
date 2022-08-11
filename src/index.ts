@@ -1,8 +1,8 @@
-const pluralize = (num, word) => (num > 1 ? word + "s" : word);
+const pluralize = (num: number, word: string) => (num > 1 ? word + "s" : word);
 
-const onlyOne = (inputs) => inputs.filter((input) => input >= 1).length === 1;
+const onlyOne = (inputs: number[]) => inputs.filter((input: number) => input >= 1).length === 1;
 
-const moreThanOne = (inputs) => inputs.filter((input) => input >= 1).length > 1;
+const moreThanOne = (inputs: number[]) => inputs.filter((input: number) => input >= 1).length > 1;
 
 /**
  * @param  {number} ms - Milliseconds to parse
@@ -12,7 +12,7 @@ const moreThanOne = (inputs) => inputs.filter((input) => input >= 1).length > 1;
  * @example friendlyDuration(1000) // 1 second
  * @example friendlyDuration(172800000 + 1000 + 7200000) // 2 days, 2 hours, and 1 second
  */
-export default (ms, addCommas = true, addAnd = true) => {
+export default (ms: number, addCommas = true, addAnd = true) => {
     const s = Math.floor((ms / 1000) % 60);
     const m = Math.floor((ms / (1000 * 60)) % 60);
     const h = Math.floor((ms / (1000 * 60 * 60)) % 24);
