@@ -1,8 +1,10 @@
 const pluralize = (num: number, word: string) => (num > 1 ? word + "s" : word);
 
-const onlyOne = (inputs: number[]) => inputs.filter((input: number) => input >= 1).length === 1;
+const onlyOne = (inputs: number[]) =>
+    inputs.filter((input: number) => input >= 1).length === 1;
 
-const moreThanOne = (inputs: number[]) => inputs.filter((input: number) => input >= 1).length > 1;
+const moreThanOne = (inputs: number[]) =>
+    inputs.filter((input: number) => input >= 1).length > 1;
 
 /**
  * @param  {number} ms - Milliseconds to parse

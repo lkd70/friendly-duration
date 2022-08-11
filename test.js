@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-undef */
-import friendlyDuration from "./main.js";
+const friendlyDuration = require("./").default;
 
 test("friendlyDuration(1000)", () => {
     expect(friendlyDuration(1000))
