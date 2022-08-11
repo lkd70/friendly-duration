@@ -11,12 +11,18 @@
 
 > Converts the given millisecond value in to a human readable format.
 
-### 🏠 [Homepage](https://github.com/lkd70/friendly-duration)
+### [GitHub](https://github.com/lkd70/friendly-duration)
+### [NPM](https://www.npmjs.com/package/friendly-duration)
 
 ## Install
 
 ```sh
-yarn install friendly-duration
+yarn add friendly-duration
+```
+Or
+
+```sh
+npm install friendly-duration
 ```
 
 ## Usage
@@ -24,7 +30,11 @@ yarn install friendly-duration
 ```javascript
 import friendlyDuration from "friendly-duration";
 
-console.log(friendlyDuration(1000));
+// friendlyDuration(MS, AddCommas?, AddAnd?)
+console.log(friendlyDuration(1000)); // 1 second
+console.log(friendlyDuration(86400000 + 10000)); // 1 day and 10 seconds
+console.log(friendlyDuration(86400000 + 3600000 + 10000)); // 1 day, 1 hour and 10 seconds
+console.log(friendlyDuration(86400000 + 3600000 + 10000, false, false)); // 1 day 1 hour 10 seconds
 ```
 
 ## Author
